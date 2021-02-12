@@ -1,14 +1,23 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '@common/Layout';
-import { Container } from '@components/global';
+import Footer from '@sections/Footer';
+import { Section, Container } from '@components/global';
 
 const NotFoundPage = () => (
   <Layout>
-    <Container>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Container>
+    <Section id="404" accent style={{ padding: '500px auto' }}>
+      <Container style={{ height: '70vh' }}>
+        <h1>ERROR:404 PAGE NOT FOUND</h1>
+        <p>Sorry this page doesn't exist</p>
+        <br />
+        <Link to="/" style={{ color: 'inherit' }}>
+          Back to the homepage
+        </Link>
+      </Container>
+    </Section>
+    <Footer />
   </Layout>
 );
 

@@ -10,9 +10,9 @@ const Header = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_build: file(
+        art_logo: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "build" }
+          name: { eq: "logo" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1400) {
@@ -27,22 +27,17 @@ const Header = () => (
         <Container>
           <Grid>
             <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
+              <Img fluid={data.art_logo.childImageSharp.fluid} />
             </Art>
             <Text>
               <h1>
-                Fast in
+                Specialist
                 <br />
-                every way
+                Electrical
                 <br />
-                that matters
+                Contractor
               </h1>
               <br />
-              <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
             </Text>
           </Grid>
         </Container>
@@ -52,8 +47,14 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  background-color: ${props => props.theme.color.primary};
-  padding-top: 96px;
+  background-image: linear-gradient(
+    ${props => props.theme.color.primary},
+    ${props => props.theme.color.secondary}
+  );
+  background-size: cover;
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 96px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding-top: 128px;

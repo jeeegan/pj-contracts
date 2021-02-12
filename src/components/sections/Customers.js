@@ -1,42 +1,41 @@
 import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
-import { ReactComponent as AirbnbLogo } from '@images/logos/airbnb.svg';
-import { ReactComponent as AppleMusicLogo } from '@images/logos/apple-music.svg';
-import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
-import { ReactComponent as NodeLogo } from '@images/logos/nodejs.svg';
-import { ReactComponent as NikeLogo } from '@images/logos/nike.svg';
-import { ReactComponent as InstagramLogo } from '@images/logos/instagram.svg';
+import { ReactComponent as BBCLogo } from '@images/logos/bbc.svg';
+import { ReactComponent as BonhamsLogo } from '@images/logos/bonhams.svg';
+import { ReactComponent as BAELogo } from '@images/logos/bae.svg';
+import { ReactComponent as JWLogo } from '@images/logos/jwcarpets.svg';
+import { ReactComponent as WylieBissetLogo } from '@images/logos/wyliebisset.svg';
+import { ReactComponent as LockedInLogo } from '@images/logos/lockedin.svg';
 
 const LOGOS = [
   {
-    logo: AirbnbLogo,
-    link: 'https://airbnb.io',
+    logo: BBCLogo,
+    link: 'https://www.bbc.co.uk/',
   },
   {
-    logo: AppleMusicLogo,
-    link: 'https://www.apple.com/in/music/',
+    logo: BonhamsLogo,
+    link: 'https://www.bonhams.com/',
   },
   {
-    logo: CokeLogo,
-    link: 'https://coca-cola.com',
+    logo: BAELogo,
+    link: 'https://www.baesystems.com/',
   },
   {
-    logo: NodeLogo,
-    link: 'https://nodejs.org',
+    logo: JWLogo,
+    link: 'https://www.jwcarpets.com/',
   },
   {
-    logo: NikeLogo,
-    link: 'https://nike.com',
+    logo: WylieBissetLogo,
+    link: 'https://www.wyliebisset.com/',
   },
   {
-    logo: InstagramLogo,
-    link: 'https://instagram.com',
+    logo: LockedInLogo,
+    link: 'https://escaperoomglasgow.com/',
   },
 ];
 
@@ -57,10 +56,10 @@ const UsedBy = () => (
       }
     `}
     render={data => (
-      <Section id="brands" accent>
+      <StyledSection id="customers" accent>
         <StyledContainer>
           <div>
-            <h1>Used by biggest in tech</h1>
+            <h1>Some of our customers</h1>
             <LogoGrid>
               {LOGOS.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link}>
@@ -69,11 +68,8 @@ const UsedBy = () => (
               ))}
             </LogoGrid>
           </div>
-          <Art>
-            <Img fluid={data.art_story.childImageSharp.fluid} />
-          </Art>
         </StyledContainer>
-      </Section>
+      </StyledSection>
     )}
   />
 );
@@ -96,9 +92,19 @@ const LogoGrid = styled.div`
   }
 `;
 
+const StyledSection = styled(Section)`
+  background-image: linear-gradient(
+    ${props => props.theme.color.primary},
+    ${props => props.theme.color.secondary}
+  );
+  background-size: cover;
+  position: relative;
+`;
+
 const StyledContainer = styled(Container)`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+
   position: relative;
 
   @media (max-width: ${props => props.theme.screen.md}) {

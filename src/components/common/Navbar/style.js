@@ -5,7 +5,7 @@ import { Container } from '@components/global';
 export const Nav = styled.nav`
   padding: 16px 0;
   background-color: ${props => props.theme.color.primary};
-  position: fixed;
+  // position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
@@ -41,19 +41,12 @@ export const NavListWrapper = styled.div`
 
 export const NavItem = styled.li`
   margin: 0 0.75em;
-  font-family: ${props => props.theme.font.secondary};
+  font-family: ${props => props.theme.font.primary};
   ${props => props.theme.font_size.small};
 
   a {
     text-decoration: none;
-    opacity: 0.7;
     color: ${props => props.theme.color.black.regular};
-  }
-
-  &.active {
-    a {
-      opacity: 1;
-    }
   }
 `;
 
@@ -64,7 +57,7 @@ export const MobileMenu = styled.div`
 
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
-  ${props => props.theme.font_size.large};
+  ${props => props.theme.font_size.xlarge};
 `;
 
 export const Mobile = styled.div`

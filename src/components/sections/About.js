@@ -9,31 +9,9 @@ const About = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
+        art_lightbulbs: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_learn: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_ideas: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
+          name: { eq: "lightbulbs" }
         ) {
           childImageSharp {
             fluid(maxWidth: 760) {
@@ -48,44 +26,20 @@ const About = () => (
         <Container>
           <Grid>
             <div>
-              <h2>Speed past the competition</h2>
+              <h2>About</h2>
               <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
-              </p>
-            </div>
-          </Grid>
-          <Grid>
-            <div>
-              <h2>Grow and build your ideas</h2>
-              <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
+                West of Scotland specialist electrical contractor with 20 years’
+                experience. We cater for both domestic and commercial clients.
+                Specialising in light design and interior finishes. We only use
+                premium quality parts from brands such as Hager, JCC and AICO.
                 <br />
                 <br />
-                Gatsby is fast in every way that matters.
+                We also partner with a select group of other specialist trades
+                to deliver your project to exacting standards.
               </p>
             </div>
             <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
+              <Img fluid={data.art_lightbulbs.childImageSharp.fluid} />
             </Art>
           </Grid>
         </Container>
@@ -98,7 +52,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-gap: 40px;
-  text-align: right;
+  text-align: left;
   align-items: center;
   justify-items: center;
   margin: 24px 0;

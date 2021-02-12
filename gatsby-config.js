@@ -17,13 +17,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `team`,
-        path: `${__dirname}/src/images/team`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `art`,
         path: `${__dirname}/src/images/art`,
       },
@@ -33,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Absurd`,
-        short_name: `absurd`,
+        name: `PJ Contracts`,
+        short_name: `PJ Contracts`,
         start_url: `/`,
         background_color: `#8bd8ed`,
         theme_color: `#8bd8ed`,
@@ -45,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`average`, `prata\:400,700`],
+        fonts: [`open sans\:700`, `roboto`],
       },
     },
     {
