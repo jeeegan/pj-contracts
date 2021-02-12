@@ -59,7 +59,7 @@ const UsedBy = () => (
       <StyledSection id="customers" accent>
         <StyledContainer>
           <div>
-            <h1>Some of our customers</h1>
+            <h1>Customers</h1>
             <LogoGrid>
               {LOGOS.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link}>
@@ -104,7 +104,7 @@ const StyledSection = styled(Section)`
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: center;
-
+  text-align: center;
   position: relative;
 
   @media (max-width: ${props => props.theme.screen.md}) {
