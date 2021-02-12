@@ -84,10 +84,6 @@ const Grid = styled.div`
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
     grid-gap: 80px;
-
-    > ${Art} {
-      order: 2;
-    }
   }
 `;
 

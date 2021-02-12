@@ -85,7 +85,7 @@ const ContactForm = styled.form`
     }
   }
   .btn {
-    width: 35%;
+    width: 40%;
     margin-top: 1rem;
     margin-right: 1rem;
     height: 2.5rem;
@@ -94,6 +94,7 @@ const ContactForm = styled.form`
       background-color: ${props => props.theme.color.primary};
       border: 2px solid ${props => props.theme.color.black.lighter};
     }
+    padding: 0 1 rem;
   }
 
   label {
