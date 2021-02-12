@@ -89,6 +89,7 @@ const ContactForm = styled.form`
     margin-top: 1rem;
     margin-right: 1rem;
     height: 2.5rem;
+    text-align: center
     &:hover {
       color: white;
       background-color: ${props => props.theme.color.primary};
