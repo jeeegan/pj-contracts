@@ -28,10 +28,11 @@ const About = () => (
             <div>
               <h2>About</h2>
               <p>
-                West of Scotland specialist electrical contractor with 20 years’
-                experience. We cater for both domestic and commercial clients.
-                Specialising in light design and interior finishes. We only use
-                premium quality parts from brands such as Hager, JCC and AICO.
+                PJ Contracts is a specialist electrical contractor with 20
+                years’ experience. Based in the West of Scotland, we cater for
+                both domestic and commercial clients. Specialising in light
+                design and interior finishes. We only use premium quality parts
+                from brands such as Hager, JCC and AICO.
                 <br />
                 <br />
                 We also partner with a select group of other specialist trades
