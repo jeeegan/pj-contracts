@@ -56,7 +56,6 @@ const StyledContainer = styled(Container)`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 75%;
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 100%;
   }
@@ -77,11 +76,12 @@ const ContactForm = styled.form`
     background-color: ${props => props.theme.color.white.dark};
     border: 2px solid ${props => props.theme.color.black.light};
     border-radius: 5px;
+    line-height: 2.5rem;
     width: 100%;
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-      border: 2px solid ${props => props.theme.color.primary};
+      border: 2px solid ${props => props.theme.color.secondary};
     }
   }
   .btn {

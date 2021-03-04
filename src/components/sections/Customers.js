@@ -59,7 +59,7 @@ const UsedBy = () => (
       <StyledSection id="customers" accent>
         <StyledContainer>
           <div>
-            <h1>Customers</h1>
+            <h2>Who we work with</h2>
             <LogoGrid>
               {LOGOS.map(({ logo, link }) => (
                 <ExternalLink key={link} href={link}>
@@ -93,11 +93,7 @@ const LogoGrid = styled.div`
 `;
 
 const StyledSection = styled(Section)`
-  background-image: linear-gradient(
-    ${props => props.theme.color.primary},
-    ${props => props.theme.color.secondary}
-  );
-  background-size: cover;
+  background-color: ${props => props.theme.color.primary};
   position: relative;
 `;
 
@@ -109,23 +105,6 @@ const StyledContainer = styled(Container)`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-content: center;
-  }
-`;
-
-const Art = styled.figure`
-  width: 600px;
-  position: absolute;
-  top: -12%;
-  right: 50%;
-
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    top: 0;
-    right: 65%;
-    width: 500px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: none;
   }
 `;
 

@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
   <StaticQuery
@@ -47,14 +46,8 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  background-image: linear-gradient(
-    ${props => props.theme.color.primary},
-    ${props => props.theme.color.secondary}
-  );
-  background-size: cover;
   position: relative;
   padding-top: 12px;
-  padding-bottom: 96px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     padding-top: 128px;
@@ -92,15 +85,6 @@ const Text = styled.div`
 
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: start;
-  }
-`;
-
-const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
   }
 `;
 
